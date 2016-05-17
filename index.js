@@ -14,8 +14,6 @@ module.exports = function (opts) {
 			bucket.add();
 		});
 
-		queue.push
-
 	};
 
 };
