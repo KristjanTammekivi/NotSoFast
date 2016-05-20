@@ -60,6 +60,9 @@ module.exports = function (opts) {
 		bucket.empty();
 	};
 
+	limiter.timeoutError = module.exports.timeoutError;
+	limiter.bucketFullError = module.exports.bucketFullError;
+
 	return limiter;
 
 };
