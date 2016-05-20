@@ -8,6 +8,14 @@ Promise.config({
 
 module.exports = function (opts) {
 
+	opts.timeout = parseInt(opts.timeout, 10) || 5000;
+	opts.interval = parseInt(opts.interval, 10) || 1000;
+	opts.ticketsPerInterval = parseInt(opts.ticketsPerInterval, 10);
+	if (!opts.ticketsPerInterval) {
+		throw new Error('NotSoFast: ticketsPerInterval is required');
+	}
+	opts.bucketSize = parseInt(opts.bucketSize) || opts.ticketsPerInterval;
+
 	const bucket = new SetBucket(opts.bucketSize);
 	let freeTickets = opts.ticketsPerInterval;
 
