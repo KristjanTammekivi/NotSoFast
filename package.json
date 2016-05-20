@@ -1,6 +1,6 @@
 {
   "name": "notsofast",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A promise based rate limiter with configurable timeouts",
   "main": "index.js",
   "scripts": {
