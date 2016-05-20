@@ -61,7 +61,7 @@ describe('Not So Fast', function () {
 			}).catch(next);
 		});
 
-	xit('Should not resolve more promises in interval than possible',
+	it('Should not resolve more promises in interval than possible',
 		function (next) {
 			let prom1 = notsofast();
 			let prom2 = notsofast();
