@@ -29,3 +29,15 @@ Error predicates
 ----------------
 
 NotSoFast is based on bluebird, so you can catch errors with predicates.
+
+    notsofast = require('notsofast')(options);
+
+    notsofast()
+        .then(doMyTask)
+        .catch(notsofast.timeoutError, function () {
+            // Ticket timed out
+        })
+        .catch(notsofast.bucketFullError, function () {
+            // Bucket is full
+        })
+        .catch(console.log);
