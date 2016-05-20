@@ -31,4 +31,11 @@ Bucket.prototype.remove = function (item) {
 	return this.queue.delete(item);
 };
 
+Bucket.prototype.empty = function () {
+	for (let item of this.queue) {
+		item.reject(new Error('NotSoFast emptied'));
+	}
+	this.queue.clear();
+};
+
 module.exports = Bucket;
