@@ -19,7 +19,6 @@ module.exports = function (opts) {
 	function drip() {
 		let ticket;
 		while(freeTickets-- > 0) {
-			console.log('tickets: ', freeTickets);
 			ticket = bucket.take();
 			if (ticket === null) {
 				break;
