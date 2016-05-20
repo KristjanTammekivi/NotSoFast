@@ -69,7 +69,6 @@ describe('Not So Fast', function () {
 				.resolve()
 				.timeout(100)
 				.then(function () {
-					console.log('ding');
 					expect(prom1.isFulfilled()).to.be.true;
 					expect(prom2.isFulfilled()).to.be.false;
 					next();
