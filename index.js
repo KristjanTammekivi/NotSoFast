@@ -2,10 +2,6 @@ const Promise = require('bluebird');
 const SetBucket = require('./SetBucket');
 const SubclassError = require('subclass-error');
 
-Promise.config({
-  longStackTraces: true
-});
-
 module.exports = function (opts) {
 
 	opts.timeout = parseInt(opts.timeout, 10) || 5000;
